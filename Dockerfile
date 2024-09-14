@@ -1,4 +1,4 @@
-FROM node:20.17.0
+FROM node:18.20.4
 MAINTAINER Hain Wang <hailiang.hl.wang@gmail.com>
 
 RUN apt-get update
