@@ -5,11 +5,11 @@ RUN apt-get update
 RUN apt-cache search openjdk
 RUN apt-get install openjdk-17-jdk -y
 
-RUN npm install -g cnpm --registry=https://registry.npmmirror.com
+RUN npm install -g pnpm --registry=https://registry.npmmirror.com
 RUN /bin/bash -c "mkdir -p /hanlp-api"
 COPY . /hanlp-api
 WORKDIR /hanlp-api
-RUN cnpm install
+RUN pnpm install
 
 ENTRYPOINT ["node"]
 CMD ["app.js"]
